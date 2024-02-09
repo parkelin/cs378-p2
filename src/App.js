@@ -3,6 +3,10 @@ import MenuItem from './components/MenuItem';
 
 // import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
 
+const logo = [{
+  imageName: 'logo.png',
+}]
+
 // Menu data. An array of objects where each object represents a menu item. Each menu item has an id, title, description, image name, and price.
 // You can use the image name to get the image from the images folder.
 const menuItems = [
@@ -84,9 +88,11 @@ function App() {
     <div>
         <div class="container-fluid">
           <div class="row">
+
             <div class="header"> 
-              <img class="logo" src={`/images/logo.png`} alt="An image of a pink flower and text that says Lilys Cafe."/>
+              <img class="logo" src={"/images/{imageName}.png"}/>
             </div>
+            
           </div>
         </div>
 
