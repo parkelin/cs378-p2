@@ -90,7 +90,7 @@ function App() {
           <div class="row">
 
             <div class="header"> 
-              <img class="logo" src={"/images/{imageName}.png"}/>
+              <img class="logo" src={"images/logo.png"}/>
             </div>
             
           </div>
