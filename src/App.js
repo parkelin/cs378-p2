@@ -82,11 +82,37 @@ const menuItems = [
 function App() {
   return (
     <div>
-      <h1>Menu</h1>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="header"> 
+              <img class="logo" src={`/images/logo.png`} alt="An image of a pink flower and text that says Lilys Cafe."/>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12" align="center">
+              <p id="slogan"> Authentic Japanese Flavors </p> 
+              <p id="slogan2"> Blend of traditional & innovation </p>
+            </div>
+          </div>
+        </div>
+
       <div className="menu">
         {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
-        <MenuItem title={menuItems[0].title} /> {/* Example for how to use a component */}
+        {menuItems.map((item) => 
+          (<div key={item.id}>
+            <MenuItem
+              title={item.title}
+              image={item.imageName}
+              description={item.description}
+              price={item.price}
+            />
+          </div>
+        ))}
       </div>
+
     </div>
   );
 }
