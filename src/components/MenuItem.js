@@ -12,8 +12,8 @@ const MenuItem = ({ title, image, description, price }) => {
             <div class="row">
                 <div class="col-4">
                     {/* Image */}
-                    {/* <img src="/images/{imageName}.png"></img> */}
-                    <img class="image" src={"images/" + image}  />
+                    <img src="/images/{imageName}.png"></img>
+                    {/* <img class="image" src={"images/" + image}/> */}
                 </div>
 
                 <div class="col-8">
